@@ -1,11 +1,12 @@
 import "./App.css";
-import { getAllNotes, createNote } from "./services/NoteService";
+import { getNote, createNote } from "./services/NoteService";
 import React from "react";
 import Textbox from "./Textbox";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
-  getAllNotes = () => {
-    getAllNotes().then((notes) => {
+  getNote = (id) => {
+    getNote(id).then((notes) => {
       console.log(notes);
     });
   };

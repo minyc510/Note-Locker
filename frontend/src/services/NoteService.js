@@ -1,5 +1,5 @@
-export async function getAllNotes() {
-    const response = await fetch('/api/notes');
+export async function getNote(id) {
+    const response = await fetch('/api/note/' + id);
     return await response.json();
 }
 
